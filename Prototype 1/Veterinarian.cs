@@ -19,5 +19,13 @@ namespace Prototype_1
 
         public Veterinarian(int eID, string n, DateTime st, double s, string specialization)
            : base(eID, n, st, s) => this.specialization = specialization;
+    
+        public void UpdateMedicalHistory(MedicalHistory medicalHistory)
+        {
+            medicalHistory.OralInfection = "update OralInfection";
+            medicalHistory.Allergy = "update Allergy";
+            medicalHistory.Diabetes = "update Diabetes";
+
+        }
     }
 }

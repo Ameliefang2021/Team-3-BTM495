@@ -46,5 +46,10 @@ namespace Prototype_1
             Origin = origin;
             Destination = destination;
         }
+
+        public void UpdateAnimal(Animal animal)
+        {
+            animal.Location = "new location";
+        }
     }
 }

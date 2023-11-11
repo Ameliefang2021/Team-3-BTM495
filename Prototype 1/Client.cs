@@ -14,6 +14,8 @@ namespace Prototype_1
         private double familyIncome;
         private string livingArrangement;
         private int noChildren;
+        private List<Appointment> appointments;
+        private Application application;
 
         public int ClientID
         {
@@ -70,21 +72,20 @@ namespace Prototype_1
             return application;
         }
 
-        public Appointment bookAppointment(int appointID, DateTime ti)
+        public Appointment bookAppointment(int appointID, DateTime ti, Client c,Agent a)
         {
 
-            Appointment appointment = new Appointment(appointID, ti);
+            Appointment appointment = new Appointment(appointID, ti,c,a);
 
             return appointment;
 
         }
 
-        public Appointment cancalAppointment(int appointID, DateTime ti)
+
+        public void cancalAppointment(Appointment app)
         {
-
-            Appointment appointment = new Appointment(appointID, ti);
-            return appointment;
-
+            appointments = new List<Appointment>();
+            appointments.Remove(app);
         }
     }
 }

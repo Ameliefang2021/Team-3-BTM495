@@ -9,10 +9,18 @@ namespace Prototype_1
     public class Accountant : Employee
     {
 
+        
+
         public Accountant(int eID, string n, DateTime st, double s)
            : base(eID, n, st, s)
         {
 
         }
+
+        public void ProcessPmt(Invoice invoice)
+        {
+            invoice.Accountant = this;
+        }
+
     }
 }

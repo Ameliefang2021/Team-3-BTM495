@@ -10,6 +10,8 @@ namespace Prototype_1
     {
         private int appointID;
         private DateTime time;
+        private Client client;
+        private Agent agent;
 
         public int AppointID
         {
@@ -23,12 +25,23 @@ namespace Prototype_1
             set { time = value; }
         }
 
+        public Client Client { get => client; set => client = value; }
+        public Agent Agent { get => agent; set => agent = value; }
+
         public Appointment() { }
 
         public Appointment(int appointID, DateTime ti)
         {
             AppointID = appointID;
             Time = ti;
+        }
+
+        public Appointment(int appointID, DateTime time, Client client, Agent agent)
+        {
+            AppointID = appointID;
+            Time = time;
+            Client = client;
+            Agent = agent;
         }
     }
 }

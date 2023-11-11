@@ -10,6 +10,8 @@ namespace Prototype_1
     {
         private int appID;
         private string status;
+        private Client client;
+        private Animal animal;
 
         public int AppID
         {
@@ -22,6 +24,9 @@ namespace Prototype_1
             get { return status; }
             set { status = value; }
         }
+
+        public Client Client { get => client; set => client = value; }
+        public Animal Animal { get => animal; set => animal = value; }
 
         public Application() { }
 

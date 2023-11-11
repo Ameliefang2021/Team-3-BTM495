@@ -30,5 +30,10 @@ namespace Prototype_1
             Address = add;
             Capacity = cap;
         }
+
+        public void CalOccupation()
+        {
+
+        }
     }
 }

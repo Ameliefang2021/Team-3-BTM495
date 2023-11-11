@@ -14,6 +14,10 @@ namespace Prototype_1
         private DateTime dateIssued;
         private DateTime dateDue;
 
+        private double unitCost;
+        private Accountant accountant;
+        private Client client;
+
         public int InvoiceID
         {
             get { return invoiceID; }
@@ -44,6 +48,10 @@ namespace Prototype_1
             set { dateDue = value; }
         }
 
+        public double UnitCost { get => unitCost; set => unitCost = value; }
+        public Accountant Accountant { get => accountant; set => accountant = value; }
+        public Client Client { get => client; set => client = value; }
+
         public Invoice() { }
 
         public Invoice(int iID, double t, double bal, DateTime dI, DateTime dD)
@@ -54,5 +62,16 @@ namespace Prototype_1
             DateIssued = dI;
             DateDue = dD;
         }
+
+        public Invoice GetInvoiceByID(int invoiceid)
+        {
+            return new Invoice(invoiceID);
+        }
+
+        public double CalPrice(double unitCost,int quantity) {
+            return unitCost * quantity;
+        }
+
+
     }
 }

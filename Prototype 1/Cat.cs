@@ -22,13 +22,16 @@ namespace Prototype_1
             get { return declawed; }
             set { declawed = value; }
         }
+       
 
+        public Cat() { }
         public Cat(int aID, int age, string sx, string co, string si, string breed, bool declawed)
-            : base(aID, age, sx, co, si)
+            : base(aID,age, sx, co, si)
         {
             this.breed = breed;
             this.declawed = declawed;
         }
+
     }
 
 }

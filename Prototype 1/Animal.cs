@@ -10,10 +10,13 @@ namespace Prototype_1
     public abstract class Animal
     {
         private int animalID;
+        private string name;
         private int age;
         private string sex;
         private string color;
         private string size;
+        private string location;
+
 
         public int AnimalID
         {
@@ -45,6 +48,9 @@ namespace Prototype_1
             set { size = value; }
         }
 
+        public string Name { get => name; set => name = value; }
+        public string Location { get => location; set => location = value; }
+
         public Animal() { }
 
         public Animal(int aID, int age, string sx, string co, string si)
@@ -55,6 +61,18 @@ namespace Prototype_1
             Color = co;
             Size = si;
         }
+
+        public Animal(int aID, string name,int age, string sx, string co, string si,string loc)
+        {
+            AnimalID = aID;
+            Name = name;
+            Age = age;
+            Sex = sx;
+            Color = co;
+            Size = si;
+            Location = loc;
+        }
+
     }
 
     
