@@ -62,5 +62,29 @@ namespace Prototype_1
             LivingArrangement = la;
             NoChildren = nc;
         }
+
+        public Application applyAdoptionForm(int appID, string stat)
+        {
+            Application application = new Application(appID, stat);
+
+            return application;
+        }
+
+        public Appointment bookAppointment(int appointID, DateTime ti)
+        {
+
+            Appointment appointment = new Appointment(appointID, ti);
+
+            return appointment;
+
+        }
+
+        public Appointment cancalAppointment(int appointID, DateTime ti)
+        {
+
+            Appointment appointment = new Appointment(appointID, ti);
+            return appointment;
+
+        }
     }
 }
